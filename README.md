@@ -2,7 +2,7 @@
 
 This is basic Rails API only CRUD.
 
-## Testing Gem:
+## Testing Gem
 * rspec_rails
 * factory_bot_rails
 * faker
