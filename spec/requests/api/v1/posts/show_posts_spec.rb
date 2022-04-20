@@ -2,9 +2,9 @@ require 'rails_helper'
 
 RSpec.describe "Show Post", type: :request do
     describe "GET /posts/:id" do
-        let!(:post) { FactoryBot.create(:post) }
-
         context "with valid id" do
+            let!(:post) { FactoryBot.create(:post) }
+
             before do
                 get "/api/v1/posts/#{post.id}"
             end
@@ -14,9 +14,9 @@ RSpec.describe "Show Post", type: :request do
             end
         end
 
-        context "with valid id" do
+        context "with invalid id" do
             before do
-                get "/api/v1/posts/#{nil}"
+                get "/api/v1/posts/#{010011100}"
             end
 
             it "return status code 404" do
