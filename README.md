@@ -18,10 +18,10 @@ I use PostgreSQL, or freely to use your preferences database if you want to try 
 This repo deployed to Heroku using github action CI/CD. Its use Deploy to Heroku github action.
 
 ## Live Demo
-<strong>End Point</storng><br />
+<strong>API URL</storng><br />
 https://secret-river-45854.herokuapp.com
 
-### Create Posts
+### create
 ```
 method: POST
 endpoint: /api/v1/posts
@@ -47,13 +47,12 @@ response:
 }
 ```
 
-### Index Posts
+### index
 ```
 method: GET
 endpoint: /api/v1/posts
 
 response:
-
 [
     {
         "id": 1,
@@ -61,9 +60,42 @@ response:
         "content": "this is just a test content",
         "created_at": "2022-04-20T08:04:04.777Z",
         "updated_at": "2022-04-20T08:04:04.777Z"
+    },
+    {
+        "id": 2,
+        "title": "second post",
+        "content": "this just an example second post",
+        "created_at": "2022-04-20T08:35:22.002Z",
+        "updated_at": "2022-04-20T08:35:22.002Z"
     }
 ]
-
 ```
 
+### show 
+```
+method: GET
+endpoint: /api/v1/posts/:id
+
+
+response:
+
+{
+    "id": 1,
+    "title": "title",
+    "content": "this is just a test content",
+    "created_at": "2022-04-20T08:04:04.777Z",
+    "updated_at": "2022-04-20T08:04:04.777Z"
+}
+```
+
+### delete
+```
+method: DELETE
+endpoint: /api/v1/posts/:id
+
+response:
+    status: 204 No Content
+
+
+```
 
