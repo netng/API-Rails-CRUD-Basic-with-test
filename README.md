@@ -3,9 +3,9 @@
 This is basic Rails API only CRUD.
 
 ## Testing Gem:
-- rspec_rails
-- factory_bot_rails
-- faker
+* rspec_rails
+* factory_bot_rails
+* faker
 
 ## Run testing
 `rspec`
