@@ -47,5 +47,22 @@ response:
 ```
 
 ### Index Posts
+```
+method: GET
+endpoint: /api/v1/posts
+
+response:
+
+[
+    {
+        "id": 1,
+        "title": "title",
+        "content": "this is just a test content",
+        "created_at": "2022-04-20T08:04:04.777Z",
+        "updated_at": "2022-04-20T08:04:04.777Z"
+    }
+]
+
+```
 
 
