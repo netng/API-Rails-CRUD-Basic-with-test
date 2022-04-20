@@ -19,6 +19,10 @@ RSpec.describe "Show Post", type: :request do
                 get "/api/v1/posts/#{010011100}"
             end
 
+            it "return content not found" do
+                expect(json["message"]).to eq("content not found")
+            end
+
             it "return status code 404" do
                 expect(response).to have_http_status(:not_found)
             end

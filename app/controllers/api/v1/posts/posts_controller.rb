@@ -10,7 +10,7 @@ class Api::V1::Posts::PostsController < ApplicationController
     # GET /api/v1/posts/:id
     def show
         if @post.nil?
-            render status: :not_found
+            render json: { message: "content not found" }, status: :not_found
         else
             render json: @post, status: :ok
         end
