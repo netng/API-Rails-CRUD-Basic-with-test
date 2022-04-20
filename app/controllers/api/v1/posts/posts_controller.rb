@@ -1,10 +1,19 @@
 class Api::V1::Posts::PostsController < ApplicationController
-    before_action :set_post, only: [:destroy]
+    before_action :set_post, only: [:destroy, :show]
 
     # GET /api/v1/posts
     def index
         @posts = Post.all
         render json: @posts
+    end
+
+    # GET /api/v1/posts/:id
+    def show
+        if @post.nil?
+            render status: :not_found
+        else
+            render json: @post, status: :ok
+        end
     end
 
     # POST /api/v1/posts
