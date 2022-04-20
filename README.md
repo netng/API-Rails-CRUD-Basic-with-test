@@ -1,24 +1,19 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is basic Rails API only CRUD.
 
-Things you may want to cover:
+## Testing Gem:
+- rspec_rails
+- factory_bot_rails
+- faker
 
-* Ruby version
+## Run testing
+`rspec`
 
-* System dependencies
+## Database
+I use PostgreSQL, or freely to use your preferences database if you want to try source code from this repo.
 
-* Configuration
+## CI/CD
+This repo deployed to Heroku using github action CI/CD. Its use Deploy to Heroku github action.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Live Demo
