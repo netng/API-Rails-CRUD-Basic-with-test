@@ -1,4 +1,5 @@
 # README
+![example event parameter](https://github.com/netng/API-Rails-CRUD-Basic-with-test/workflows/CI/badge.svg?event=push)
 
 This is basic Rails API only CRUD.
 
