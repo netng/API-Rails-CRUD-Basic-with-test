@@ -20,13 +20,13 @@ This repo deployed to Heroku using github action CI/CD. Its use Deploy to Heroku
 <strong>End Point</storng><br />
 https://secret-river-45854.herokuapp.com
 
-### POST Posts
+### Create Posts
 ```
-method: POST <br />
-endpoint: /api/v1/posts <br />
-content-type: application/json <br />
+method: POST
+endpoint: /api/v1/posts
+content-type: application/json
 
-body:<br />
+body:
 
 {
     "post": {
@@ -35,7 +35,17 @@ body:<br />
     }
 }
 
-response:<br />
+response:
+
+{
+    "id": 1,
+    "title": "title",
+    "content": "this is just a test content",
+    "created_at": "2022-04-20T08:04:04.777Z",
+    "updated_at": "2022-04-20T08:04:04.777Z"
+}
 ```
+
+### Index Posts
 
 
