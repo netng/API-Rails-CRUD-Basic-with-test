@@ -1,5 +1,5 @@
 class Api::V1::Posts::PostsController < ApplicationController
-    before_action :set_post, only: [:destroy, :show]
+    before_action :set_post, only: [:destroy, :show, :update]
 
     # GET /api/v1/posts
     def index
@@ -27,10 +27,20 @@ class Api::V1::Posts::PostsController < ApplicationController
         end
     end
 
+    # PATCH /api/v1/posts/:id
+    def update
+        if @post.nil?
+            return render json: { message: "content not found" }, status: :not_found
+        end
+        @post.update(posts_params)
+        render json: @post, status: :ok
+    end
+
+
     # DELETE /api/v1/posts/:id
     def destroy
         if @post.nil?
-            render status: :unprocessable_entity
+            return render status: :unprocessable_entity
         else
             @post.destroy
             render status: :no_content
